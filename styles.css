@@ -1,6 +1,94 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 60px auto 0 auto;
+  width: 960px;
+  color: #4E5150;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+.header .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .profile .profile__image {
+  width: 156px;
+  height: 156px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.header .profile .profile__username {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.header .profile .profile__address {
+  margin-bottom: 24px;
+  color: #A9A9A9;
+}
+.header .stats {
+  display: flex;
+}
+.header .stats .stat-item {
+  margin: 0 24px;
+  background: #E5E5E5;
+  border-radius: 12px;
+  width: 100px;
+  height: 67px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .stats .stat-item .stat-item__count {
+  font-size: 18px;
+}
+.header .stats .stat-item .stat-item__type {
+  font-size: 14px;
+  color: #BDBDBD;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 299px);
+  grid-template-rows: repeat(3, 299px);
+  grid-auto-flow: dense;
+  justify-items: stretch;
+  gap: 29px;
+  margin-bottom: 134px;
+}
+.main .main__image {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+.main .main__image_wide {
+  grid-column: span 2;
+}
+.main .main__image_high {
+  grid-row: span 2;
+  height: 627px;
+}
+
+.footer {
+  text-align: center;
+  color: #B9BDCF;
+  padding-bottom: 24px;
+}
+.footer .description__username {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
