@@ -6,7 +6,10 @@
 }
 
 body {
-  margin: 60px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
   width: 960px;
   color: #4E5150;
 }
@@ -21,10 +24,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 24px;
 }
 .header .profile .profile__image {
-  width: 156px;
   height: 156px;
+  width: auto;
   border-radius: 16px;
   margin-bottom: 16px;
 }
@@ -34,28 +38,28 @@ body {
   margin-bottom: 8px;
 }
 .header .profile .profile__address {
-  margin-bottom: 24px;
   color: #A9A9A9;
 }
 .header .stats {
   display: flex;
 }
-.header .stats .stat-item {
+.header .stats .stats__item {
   margin: 0 24px;
   background: #E5E5E5;
   border-radius: 12px;
   width: 100px;
   height: 67px;
   font-weight: 600;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.header .stats .stat-item .stat-item__count {
+.header .stats .stats__item .item__count {
   font-size: 18px;
 }
-.header .stats .stat-item .stat-item__type {
+.header .stats .stats__item .item__type {
   font-size: 14px;
   color: #BDBDBD;
 }
@@ -74,11 +78,11 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 .main .main__image_wide {
-  grid-column: span 2;
+  grid-column: auto/span 2;
 }
 .main .main__image_high {
-  grid-row: span 2;
-  height: 627px;
+  grid-row: auto/span 2;
+  height: 100%;
 }
 
 .footer {
@@ -89,6 +93,46 @@ body {
 .footer .description__username {
   text-decoration: underline;
   font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin-top: 30px;
+    width: auto;
+  }
+  .header {
+    margin-bottom: 39px;
+  }
+  .header .profile {
+    margin-bottom: 12px;
+  }
+  .header .profile .profile__image {
+    height: 100px;
+    margin-bottom: 12px;
+  }
+  .header .profile .profile__username {
+    font-size: 14px;
+  }
+  .header .profile .profile__address {
+    font-size: 10px;
+  }
+  .header .stats .stats__item {
+    width: 78px;
+    height: 52px;
+    margin: 0 6px;
+  }
+  .header .stats .stats__item .item__type, .header .stats .stats__item .item__count {
+    font-size: 12px;
+  }
+  .main {
+    grid-template-columns: repeat(3, 109px);
+    grid-template-rows: repeat(3, 109px);
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  .footer {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
